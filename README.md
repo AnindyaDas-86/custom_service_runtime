@@ -104,6 +104,7 @@ Custom headers are required to differentiate between the same HTTP method calls.
 The runtime service must uniquely identify which outbound ID to propagate the call to. The server needs a mapping table that holds these IDs along with the operation performed by the user.  
 Only the client will know the exact context of the user operation, e.g., whether the user wants to open a list, a specific instance, create a new instance, or edit an existing one.  
 The expectation from the client is to inform the server of the user operation to resolve the API call via the connector.
+Currently, custom logic is using a custom header as x-sap-crm-get-deleted for synchronisation between design time and runtime data.
 
 ---
 
