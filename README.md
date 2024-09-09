@@ -122,7 +122,7 @@ This will list all the outbound configurations. We can ask the connector service
 ## Challenges
 
 - Users can define outbound APIs in any way that suits their use case. We may need to provide a structure or guideline for designing these APIs (similar to API definition metadata).
-- There should not be any redundant outbound config with the same `apiPath`, as this will create a challenge in routing and resilience.
+- There should not be any redundant outbound config with the same `apiPath`, as this will create a challenge in routing and resilience. That mean, an api which serves as GET all data has to be unique and should not overalp     with any other api path.
 - The dependent service concept will not work for us since the auth scopes for extensibility and custom service are different.
     - **Extensibility** is only relevant for admin roles.
     - **Custom service** is relevant for end users.
@@ -206,6 +206,9 @@ To be filled during design time (admin roles only) and consumed at runtime (both
 ]
 ```
 ---
+## UI 
+![Description of image](SCR-20240909-muqp.png)
+
 
 ## Questions
 
