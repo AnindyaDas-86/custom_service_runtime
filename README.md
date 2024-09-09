@@ -222,6 +222,11 @@ Here, the entity fullname will be received from the url, http method determies t
 ```
 ---
 ## UI 
+A dropdown list to detrmine the operation type has to be introduced in the create screen for outbound configuration. The possible values are shown as below. This is simialr to the event type in custom logic external hooks.
+
+On successful save, the outbound config id has to be sent to our custom service along with the entity name and operations type. 
+
+_(Note: The communciation system needs to be kept at the service definition level as its one communciation system per custom service. Also, event bridge configuration as well, needs to make use of this communciation system. The QC need not have the option to choose the communciation systems)_
 ![Description of image](SCR-20240909-muqp.png)
 
 
