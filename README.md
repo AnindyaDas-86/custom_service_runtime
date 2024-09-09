@@ -36,12 +36,19 @@
 
 1. **Store the outbound ID map**  
    **POST**: `/sap/c4c/api/v1/custom-runtime-service/outboundMap`  
-   Body: `{TBD}`
+```json
+   {
+    "entityFullName": "jobCardEntity",
+    "httpMethod": "GET",
+    "outboundConfigID": "bc056a28-e9e8-11ee-b63c-6915697bad7d",
+    "operationType": "get-all"
+  }
+```
 
-2. **Delete outbound ID map**  
+3. **Delete outbound ID map**  
    **DELETE**: `/sap/c4c/api/v1/custom-runtime-service/outboundMap/{uuid}`
 
-3. **Get outbound ID map**  
+4. **Get outbound ID map**  
    **GET**: `/sap/c4c/api/v1/custom-runtime-service/outboundMap?$filter={any}`
 
 #### **Runtime (Admin + End Users)**
@@ -135,6 +142,14 @@ This will list all the outbound configurations. We can ask the connector service
 ## Persistency
 
 To be filled during design time (admin roles only) and consumed at runtime (both admin and end-user access).
+
+
+In the runtime, when the backend custom runtime service is invoked while any UI operation for our custom objects scenarios, like opening an OWL/QC/TI, we will query on our below persistency to figure out which outbound config to make the the grpc call to..
+
+
+Here, the entity fullname will be received from the url, http method determies the operation kind, custom http header determines the operation type. There should not be any redundancy upon operation type field value.
+
+
 ```json
 [
   {
@@ -208,6 +223,8 @@ To be filled during design time (admin roles only) and consumed at runtime (both
 ---
 ## UI 
 ![Description of image](SCR-20240909-muqp.png)
+
+
 
 
 ## Questions
