@@ -135,7 +135,7 @@ This will list all the outbound configurations. We can ask the connector service
     - **Extensibility** is only relevant for admin roles.
     - **Custom service** is relevant for end users.
 - Outbound configurations can be created only when the custom service is active and available, so it becomes a post service creation action
-- Support either api metadata or data connector configuration or both? If both, then what would be the switching mechanism in the runtime? If not, what would be the design step to accomodate only api metadata or only connector config.
+- Support either api metadata or data connector configuration or both? If both, then what would be the switching mechanism in the runtime? If not, what would be the design step to accomodate only api metadata or only connector config.(Ans: Both will exists, create outbound config automatically for all the apis uplaod as metadata)
 - edit scenarios
 
 ---
