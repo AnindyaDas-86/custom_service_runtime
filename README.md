@@ -44,7 +44,7 @@
     "operationType": "get-all"
   }
 ```
-Validation cehck is required and there should not be mpre than one active api path configured for the same operation like get-all or get-by-id
+Validation check is required and there should not be more than one active api path configured for the same operation like get-all or get-by-id
 
 3. **Delete outbound ID map**  
    **DELETE**: `/sap/c4c/api/v1/custom-runtime-service/outboundMap/{uuid}`
