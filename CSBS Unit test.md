@@ -22,7 +22,7 @@
 ### 1. Design-Time Configurations
 
 #### Communication System
-**Sample Payload**:
+**created from DC admin UI**:
 ```json
 {
     "count": 1,
