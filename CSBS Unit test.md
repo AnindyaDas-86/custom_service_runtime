@@ -236,4 +236,4 @@ Response Payload:
 - **Issues Identified**:  
   1. `$filter` queries (`status`, `endDate`) failed due to type compatibility issues.  
   2. POST operations failed 
-  3. DELETE operations require ETag/If-Match headers.
+  3. DELETE operations require ETag/If-Match headers. Support of etag/if-match to be provided by data connector service.
