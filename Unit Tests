@@ -212,6 +212,7 @@ Response Payload:
     }
 }
 ```
+
 ## DELETE Operation
 - **Endpoint**:
 `/sap/c4c/api/v1/custom-service-bridge-service/connector/customer.ssc.service.ProjectOrderService/project-order-service/ProjectOrder/{id}`
