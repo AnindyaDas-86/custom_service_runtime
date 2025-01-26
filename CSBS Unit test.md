@@ -114,11 +114,11 @@ POST: https://service7-staging.cxm-salescloud.com/sap/c4c/api/v1/data-connector-
 ```
 ### 2. Runtime Scenarios
 
-GET All Records
-	•	Endpoint:
-/sap/c4c/api/v1/custom-service-bridge-service/connector/customer.ssc.service.ProjectOrderService/project-order-service/ProjectOrder
-	•	Status Code: 200
-	•	Response Time: 901ms
+###GET All Records
+- ***Endpoint***:
+`/sap/c4c/api/v1/custom-service-bridge-service/connector/customer.ssc.service.ProjectOrderService/project-order-service/ProjectOrder`
+- Status Code: 200
+- Response Time: 901ms
 ```json
 {
     "value": {
@@ -155,17 +155,16 @@ GET All Records
 | `$count`            | `?$count=true`                        | `200`           | `334ms`           | Success                                                |
 | `$top`              | `?$count=true&$top=2`                 | `200`           | `493ms`           | Success                                                |
 | `$skip`             | `?$count=true&$top=2&$skip=1`         | `200`           | `499ms`           | Success                                                |
-| `$filter (status)`  | `?$filter=status eq 'ACTIVE'`         | `400`           | `313ms`           | Error: "The type 'Edm.String' is not compatible to 'Edm.Boolean'" |
-| `$filter (date)`    | `?$filter=endDate eq '2024-12-24'`    | `400`           | `313ms`           | Error: "The type 'Edm.String' is not compatible to 'Edm.Boolean'" |
+| `$filter (status)`  | `?$filter=status eq 'ACTIVE'`         | `400`           | `313ms`           | ⚠️ **Error**: "The type 'Edm.String' is not compatible to 'Edm.Boolean'" |
+| `$filter (date)`    | `?$filter=endDate eq '2024-12-24'`    | `400`           | `313ms`           | ⚠️ **Error**: "The type 'Edm.String' is not compatible to 'Edm.Boolean'"|
 
 ---
 
-## Create Operation
+### Create Operation
 - **Endpoint**:  
   `/sap/c4c/api/v1/custom-service-bridge-service/connector/customer.ssc.service.ProjectOrderService/project-order-service/ProjectOrder`
 - **Status Code**: `400`
-- **Error Message**:  
-  `"Invalid value \"undefined\" in content-type header."`
+- **Error Message**:  ⚠️ **Error**: "Invalid value \"undefined\" in content-type header."
 
 **Payload Example**:
 ```json
@@ -180,7 +179,7 @@ GET All Records
     },
     "status": "ACTIVE"
 }
-
+```
 ## GET by ID
 - **Endpoint**:
 `/sap/c4c/api/v1/custom-service-bridge-service/connector/customer.ssc.service.ProjectOrderService/project-order-service/ProjectOrder/{id}`
